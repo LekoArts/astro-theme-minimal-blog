@@ -127,3 +127,14 @@ a.active {
 	height: calc(var(--spacing) * 5);
 	width: calc(var(--spacing) * 5);
 }
+
+/* Theme select styling */
+select {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+select option {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
