@@ -15,8 +15,9 @@
 		"assistant": "tsx ./scripts/assistant.ts"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^5.0.6",
-		"@astrojs/react": "^5.0.7",
+		"@astrojs/markdown-remark": "^7.3.0",
+		"@astrojs/mdx": "^8.0.0",
+		"@astrojs/react": "^6.0.5",
 		"@astrojs/rss": "^4.0.17",
 		"@astrojs/sitemap": "^3.7.1",
 		"@codesandbox/sandpack-react": "^2.20.0",
@@ -25,8 +26,8 @@
 		"@lekoarts/remark-sandpack": "^1.0.0",
 		"@pagefind/default-ui": "^1.4.0",
 		"@tailwindcss/vite": "^4.2.2",
-		"astro": "^6.4.8",
-		"astro-expressive-code": "^0.41.7",
+		"astro": "^7.3.1",
+		"astro-expressive-code": "^0.44.2",
 		"pagefind": "^1.4.0",
 		"react": "^19.2.4",
 		"react-dom": "^19.2.4",

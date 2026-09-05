@@ -1,5 +1,6 @@
 import type { Options as AutolinkHeadingsOptions } from 'rehype-autolink-headings'
 import type { Options as ExternalLinkOptions } from 'rehype-external-links'
+import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
@@ -39,7 +40,8 @@ export default defineConfig({
 		},
 	],
 	markdown: {
-		// @ts-expect-error: Astro types don't match remark plugin
+		processor: unified(),
+		// @ts-expect-error: remark-smartypants' plugin type is incompatible with Astro's RemarkPlugin union
 		remarkPlugins: [[remarkSmartypants, { backticks: false }], remarkDirective, remarkAsides, [remarkSandpack, { componentName: ['Playground'] }]],
 		rehypePlugins: [
 			rehypeSlug,
