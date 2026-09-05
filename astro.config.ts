@@ -24,6 +24,15 @@ export default defineConfig({
 	site: SITE.url,
 	integrations: [expressiveCode(), mdx(), sitemap(), pagefindIntegration(), react()],
 	vite: {
+		// Sandpack imports these CommonJS packages as ESM, so Vite must prebundle them for development.
+		optimizeDeps: {
+			include: [
+				'@codesandbox/sandpack-react > anser',
+				'@codesandbox/sandpack-react > escape-carriage',
+				'@codesandbox/sandpack-react > lz-string',
+				'@codesandbox/sandpack-react > @codesandbox/sandpack-client > mime-db',
+			],
+		},
 		plugins: [tailwindcss()],
 	},
 	devToolbar: {
