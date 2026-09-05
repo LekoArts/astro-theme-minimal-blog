@@ -7,6 +7,9 @@ dist/
 # dependencies
 node_modules/
 
+# mc
+.mastracode
+
 # logs
 npm-debug.log*
 yarn-debug.log*
